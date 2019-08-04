@@ -4,9 +4,9 @@ import (
 	"flag"
 	"os"
 
-	"jingoal.com/letsgo/log"
-	"jingoal.com/letsgo/runtime"
-	"jingoal.com/letsgo/version"
+	"github.com/binchencoder/letsgo/log"
+	"github.com/binchencoder/letsgo/runtime"
+	"github.com/binchencoder/letsgo/version"
 )
 
 var (

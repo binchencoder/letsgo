@@ -9,8 +9,8 @@ go_library(
     ],
     importpath = "github.com/binchencoder/letsgo",
     deps = [
-        "@binchencoder_letsgo/log:go_default_library",
-        "@binchencoder_letsgo/runtime:go_default_library",
-        "@binchencoder_letsgo/version:go_default_library",
+        "//letsgo/log:go_default_library",
+        "//letsgo/runtime:go_default_library",
+        "//letsgo/version:go_default_library",
     ],
 )
