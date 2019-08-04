@@ -10,6 +10,6 @@ go_library(
     ],
     importpath = "github.com/binchencoder/letsgo/runtime/pprof",
     deps = [
-        "@binchencoder_third_party_go//vendor/github.com/golang/glog:go_default_library",
+        "//third-party-go/vendor/github.com/golang/glog:go_default_library",
     ],
 )
