@@ -1,0 +1,54 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
+
+go_library(
+    name = "go_default_library",
+    srcs = glob(
+        ["*.go"],
+        exclude = ["*_test.go"],
+    ),
+    importpath = "github.com/binchencoder/letsgo/grpc",
+    deps = [
+        "@binchencoder_letsgo//hashring:go_default_library",
+        "@binchencoder_letsgo//ident:go_default_library",
+        "@binchencoder_letsgo//trace:go_default_library",
+        "@binchencoder_third_party_go//vendor/github.com/cenkalti/backoff:go_default_library",
+        "@binchencoder_third_party_go//vendor/github.com/golang/glog:go_default_library",
+        "@binchencoder_third_party_go//vendor/github.com/golang/protobuf/jsonpb:go_default_library",
+        "@binchencoder_third_party_go//vendor/github.com/opentracing/opentracing-go:go_default_library",
+        "@binchencoder_third_party_go//vendor/github.com/uber/jaeger-client-go:go_default_library",
+        "@binchencoder_third_party_go//vendor/github.com/uber/jaeger-client-go/config:go_default_library",
+        "@binchencoder_third_party_go//vendor/github.com/uber/jaeger-client-go/rpcmetrics:go_default_library",
+        "@binchencoder_third_party_go//vendor/github.com/uber/jaeger-lib/metrics/go-kit:go_default_library",
+        "@binchencoder_third_party_go//vendor/github.com/uber/jaeger-lib/metrics/go-kit/expvar:go_default_library",
+        "@binchencoder_third_party_go//vendor/golang.org/x/net/context:go_default_library",
+        "@binchencoder_third_party_go//vendor/google.golang.org/grpc:go_default_library",
+        "@binchencoder_third_party_go//vendor/google.golang.org/grpc/codes:go_default_library",
+        "@binchencoder_third_party_go//vendor/google.golang.org/grpc/metadata:go_default_library",
+        "@binchencoder_third_party_go//vendor/google.golang.org/grpc/status:go_default_library",
+        "@binchencoder_ease_gateway//proto/data:go_default_library",
+        "@binchencoder_ease_gateway//proto/frontend:go_default_library",
+    ],
+)
+
+go_test(
+    name = "tests",
+    size = "small",
+    srcs = glob(["*_test.go"]),
+    embed = [
+        ":go_default_library",
+    ],
+    deps = [
+        "@binchencoder_letsgo//hashring:go_default_library",
+        "@binchencoder_letsgo//ident:go_default_library",
+        "@binchencoder_letsgo//trace:go_default_library",
+        "@binchencoder_third_party_go//vendor/github.com/cenkalti/backoff:go_default_library",
+        "@binchencoder_third_party_go//vendor/golang.org/x/net/context:go_default_library",
+        "@binchencoder_third_party_go//vendor/google.golang.org/grpc:go_default_library",
+        "@binchencoder_third_party_go//vendor/google.golang.org/grpc/codes:go_default_library",
+        "@binchencoder_third_party_go//vendor/google.golang.org/grpc/metadata:go_default_library",
+        "@binchencoder_ease_gateway//proto/data:go_default_library",
+        "@binchencoder_ease_gateway//proto/frontend:go_default_library",
+    ],
+)

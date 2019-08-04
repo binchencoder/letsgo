@@ -1,0 +1,16 @@
+package(default_visibility = ["//visibility:public"])
+
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "go_default_library",
+    srcs = [
+        "init.go",
+    ],
+    importpath = "github.com/binchencoder/letsgo",
+    deps = [
+        "@binchencoder_letsgo/log:go_default_library",
+        "@binchencoder_letsgo/runtime:go_default_library",
+        "@binchencoder_letsgo/version:go_default_library",
+    ],
+)
