@@ -8,7 +8,7 @@ go_library(
         "sql.go",
     ],
     importpath = "github.com/binchencoder/letsgo/sql",
-    deps = ["//third-party-go/vendor/upper.io/db.v3/lib/sqlbuilder:go_default_library"],
+    deps = ["@binchencoder_third_party_go//vendor/upper.io/db.v3/lib/sqlbuilder:go_default_library"],
 )
 
 go_test(
@@ -21,8 +21,8 @@ go_test(
         ":go_default_library",
     ],
     deps = [
-        "//third-party-go/vendor/github.com/smartystreets/goconvey/convey:go_default_library",
-        "//third-party-go/vendor/upper.io/db.v3:go_default_library",
-        "//third-party-go/vendor/upper.io/db.v3/lib/sqlbuilder:go_default_library",
+        "@binchencoder_third_party_go//vendor/github.com/smartystreets/goconvey/convey:go_default_library",
+        "@binchencoder_third_party_go//vendor/upper.io/db.v3:go_default_library",
+        "@binchencoder_third_party_go//vendor/upper.io/db.v3/lib/sqlbuilder:go_default_library",
     ],
 )

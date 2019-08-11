@@ -10,7 +10,7 @@ go_library(
     ),
     importpath = "github.com/binchencoder/letsgo/service/naming",
     deps = [
-        "//ease-gateway/proto/data:go_default_library"
+        "@binchencoder_ease_gateway//proto/data:go_default_library"
     ],
 )
 
@@ -22,6 +22,6 @@ go_test(
         ":go_default_library",
     ],
     deps = [
-        "//ease-gateway/proto/data:go_default_library"
+        "@binchencoder_ease_gateway//proto/data:go_default_library"
     ],
 )

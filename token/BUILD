@@ -9,7 +9,7 @@ go_library(
         exclude = ["*_test.go"],
     ),
     importpath = "github.com/binchencoder/letsgo/token",
-    deps = ["//third-party-go/vendor/github.com/dgrijalva/jwt-go:go_default_library"],
+    deps = ["@binchencoder_third_party_go//vendor/github.com/dgrijalva/jwt-go:go_default_library"],
 )
 
 go_test(
@@ -18,5 +18,5 @@ go_test(
     embed = [
         ":go_default_library",
     ],
-    deps = ["//third-party-go/vendor/github.com/smartystreets/goconvey/convey:go_default_library"],
+    deps = ["@binchencoder_third_party_go//vendor/github.com/smartystreets/goconvey/convey:go_default_library"],
 )

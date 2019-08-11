@@ -9,7 +9,7 @@ go_library(
     ],
     importpath = "github.com/binchencoder/letsgo/testing/mocks/tracing",
     deps = [
-        "//third-party-go/vendor/github.com/opentracing/opentracing-go:go_default_library",
-        "//third-party-go/vendor/github.com/stretchr/testify/mock:go_default_library",
+        "@binchencoder_third_party_go//vendor/github.com/opentracing/opentracing-go:go_default_library",
+        "@binchencoder_third_party_go//vendor/github.com/stretchr/testify/mock:go_default_library",
     ],
 )

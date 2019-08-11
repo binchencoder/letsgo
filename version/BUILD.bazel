@@ -15,6 +15,6 @@ go_library(
         "BUILD_USER": "{BUILD_USER}",
     },
     deps = [
-        "@com_github_golang_glog//:go_default_library"
+        "@binchencoder_third_party_go//vendor/github.com/golang/glog:go_default_library",
     ],
 )
