@@ -7,9 +7,9 @@ load("@bazel_tools//tools/build_defs/repo:git.bzl", "git_repository")
 http_archive(
     name = "io_bazel_rules_go",
     urls = [
-        "https://github.com/bazelbuild/rules_go/releases/download/0.18.7/rules_go-0.18.7.tar.gz",
+        "https://github.com/bazelbuild/rules_go/releases/download/0.17.8/rules_go-0.17.8.tar.gz",
     ],
-    sha256 = "45409e6c4f748baa9e05f8f6ab6efaa05739aa064e3ab94e5a1a09849c51806a",
+    sha256 = "38113392bac83252d2e6450b0056e41f35b2469903e319688883598ce38f0377",
 )
 # 从下载的扩展里载入 go_rules_dependencies go_register_toolchains 函数
 load("@io_bazel_rules_go//go:deps.bzl", "go_register_toolchains", "go_rules_dependencies")
@@ -65,17 +65,6 @@ go_repository(
     patch_args = ["-p1"],
 )
 
-go_repository(
-    name = "org_golang_x_tools",
-    build_file_proto_mode = "disable_global",
-    commit = "b5d812f8a3706043e23a9cd5babf2e5423744d30",
-    importpath = "github.com/golang/protobuf",
-    patches = [
-        "@io_bazel_rules_go//third_party:org_golang_x_tools-extras.patch",
-    ],
-    patch_args = ["-p1"],
-)
-
 # 注册一堆常用依赖 如github.com/google/protobuf golang.org/x/net
 go_rules_dependencies()
 # 下载golang工具链
@@ -83,13 +72,7 @@ go_register_toolchains()
 # 加载gazelle依赖
 gazelle_dependencies()
 
-go_repository(
-    name = "binchencoder_third_party_go",
-    commit = "884a585d57639840ae3a617bf51443951bde4724",
-    importpath = "gitee.com/binchencoder/third-party-go",
-)
-go_repository(
-    name = "binchencoder_ease_gateway",
-    commit = "544d50be5ccd1d8956eef3da33ed90ec7d6281e6",
-    importpath = "gitee.com/binchencoder/ease-gateway",
-)
+# Use gazelle to declare Go dependencies in Bazel.
+# gazelle:repository_macro repositories.bzl%go_repositories
+load("//:repositories.bzl", "go_repositories")
+go_repositories()
