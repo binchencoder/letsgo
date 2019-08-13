@@ -5,9 +5,9 @@ def go_repositories():
         name = "binchencoder_third_party_go",
         importpath = "github.com/binchencoder/third-party-go",
         urls = [
-            "https://codeload.github.com/binchencoder/third-party-go/tar.gz/4e9c6ce6b9edd7289966dda9be983f12a063584c",
+            "https://codeload.github.com/binchencoder/third-party-go/tar.gz/8178ee6c3193a0b781b16b329804a5914719f56d",
         ],
-        strip_prefix = "third-party-go-4e9c6ce6b9edd7289966dda9be983f12a063584c",
+        strip_prefix = "third-party-go-8178ee6c3193a0b781b16b329804a5914719f56d",
         type = "tar.gz",
     )
     go_repository(
