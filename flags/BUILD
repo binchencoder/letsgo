@@ -19,3 +19,12 @@ go_test(
         ":go_default_library",
     ],
 )
+
+go_test(
+    name = "go_default_test",
+    srcs = [
+        "map_test.go",
+        "slice_test.go",
+    ],
+    embed = [":go_default_library"],
+)

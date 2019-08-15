@@ -1,12 +1,27 @@
 package(default_visibility = ["//visibility:public"])
 
+load("@bazel_gazelle//:def.bzl", "gazelle")
+load("@com_github_bazelbuild_buildtools//buildifier:def.bzl", "buildifier")
 load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+buildifier(
+    name = "buildifier",
+)
+
+buildifier(
+    name = "buildifier_check",
+    mode = "check",
+)
+
+# gazelle:exclude third_party
+# gazelle:exclude vendor
+# gazelle:exclude _output
+# gazelle:prefix github.com/binchencoder/letsgo
+gazelle(name = "gazelle")
 
 go_library(
     name = "go_default_library",
-    srcs = [
-        "init.go",
-    ],
+    srcs = ["init.go"],
     importpath = "github.com/binchencoder/letsgo",
     deps = [
         "//log:go_default_library",

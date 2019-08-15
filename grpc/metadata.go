@@ -6,7 +6,7 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 
-	vexpb "github.com/binchencoder/ease-gateway/proto/data"
+	vexpb "github.com/binchencoder/gateway-proto/proto/data"
 	"github.com/binchencoder/letsgo/hashring"
 	"github.com/binchencoder/letsgo/ident"
 	"github.com/binchencoder/letsgo/trace"

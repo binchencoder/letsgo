@@ -4,25 +4,32 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 
 go_library(
     name = "go_default_library",
-    srcs = [
-        "sql.go",
-    ],
+    srcs = ["sql.go"],
     importpath = "github.com/binchencoder/letsgo/sql",
-    deps = ["@binchencoder_third_party_go//vendor/upper.io/db.v3/lib/sqlbuilder:go_default_library"],
+    deps = ["@io_upper_db_v3//lib/sqlbuilder:go_default_library"],
 )
 
 go_test(
     name = "small_tests",
     size = "small",
-    srcs = ([
-        "sql_test.go",
-    ]),
+    srcs = [],
     embed = [
         ":go_default_library",
     ],
     deps = [
-        "@binchencoder_third_party_go//vendor/github.com/smartystreets/goconvey/convey:go_default_library",
-        "@binchencoder_third_party_go//vendor/upper.io/db.v3:go_default_library",
-        "@binchencoder_third_party_go//vendor/upper.io/db.v3/lib/sqlbuilder:go_default_library",
+        "@com_github_smartystreets_goconvey//convey:go_default_library",
+        "@io_upper_db_v3//:go_default_library",
+        "@io_upper_db_v3//lib/sqlbuilder:go_default_library",
+    ],
+)
+
+go_test(
+    name = "go_default_test",
+    srcs = ["sql_test.go"],
+    embed = [":go_default_library"],
+    deps = [
+        "@com_github_smartystreets_goconvey//convey:go_default_library",
+        "@io_upper_db_v3//:go_default_library",
+        "@io_upper_db_v3//lib/sqlbuilder:go_default_library",
     ],
 )

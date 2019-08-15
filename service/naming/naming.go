@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	dpb "github.com/binchencoder/ease-gateway/proto/data"
+	dpb "github.com/binchencoder/gateway-proto/proto/data"
 )
 
 // ServiceIdToName converts service id to service name in

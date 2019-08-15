@@ -19,3 +19,9 @@ go_test(
         ":go_default_library",
     ],
 )
+
+go_test(
+    name = "go_default_test",
+    srcs = ["sync_test.go"],
+    embed = [":go_default_library"],
+)

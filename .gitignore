@@ -15,7 +15,7 @@ bazel-testlogs
 *.bin
 
 # Go vendor directory
-#vendor
+# vendor
 
 # Generated travis files
 .travis.yml

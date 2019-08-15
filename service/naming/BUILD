@@ -10,7 +10,7 @@ go_library(
     ),
     importpath = "github.com/binchencoder/letsgo/service/naming",
     deps = [
-        "@binchencoder_ease_gateway//proto/data:go_default_library"
+        "@com_github_binchencoder_gateway_proto//data:go_default_library",
     ],
 )
 
@@ -22,6 +22,13 @@ go_test(
         ":go_default_library",
     ],
     deps = [
-        "@binchencoder_ease_gateway//proto/data:go_default_library"
+        "@com_github_binchencoder_gateway_proto//data:go_default_library",
     ],
+)
+
+go_test(
+    name = "go_default_test",
+    srcs = ["naming_test.go"],
+    embed = [":go_default_library"],
+    deps = ["@com_github_binchencoder_gateway_proto//data:go_default_library"],
 )

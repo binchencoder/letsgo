@@ -7,7 +7,7 @@ import (
 
 	"google.golang.org/grpc/codes"
 
-	pb "github.com/binchencoder/ease-gateway/proto/frontend"
+	pb "github.com/binchencoder/gateway-proto/proto/frontend"
 )
 
 const (

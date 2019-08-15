@@ -11,10 +11,10 @@ go_library(
     ],
     importpath = "github.com/binchencoder/letsgo/trace",
     deps = [
-        "@binchencoder_third_party_go//vendor/github.com/golang/glog:go_default_library",
-        "@binchencoder_third_party_go//vendor/github.com/pborman/uuid:go_default_library",
-        "@binchencoder_third_party_go//vendor/golang.org/x/net/context:go_default_library",
-        "@binchencoder_third_party_go//vendor/google.golang.org/grpc/metadata:go_default_library",
+        "@com_github_golang_glog//:go_default_library",
+        "@com_github_pborman_uuid//:go_default_library",
+        "@org_golang_google_grpc//metadata:go_default_library",
+        "@org_golang_x_net//context:go_default_library",
     ],
 )
 
@@ -29,7 +29,20 @@ go_test(
         ":go_default_library",
     ],
     deps = [
-        "@binchencoder_third_party_go//vendor/golang.org/x/net/context:go_default_library",
-        "@binchencoder_third_party_go//vendor/google.golang.org/grpc/metadata:go_default_library",
+        "@org_golang_x_net//context:go_default_library",
+        "@org_golang_google_grpc//metadata:go_default_library",
+    ],
+)
+
+go_test(
+    name = "go_default_test",
+    srcs = [
+        "header_test.go",
+        "trace_test.go",
+    ],
+    embed = [":go_default_library"],
+    deps = [
+        "@org_golang_google_grpc//metadata:go_default_library",
+        "@org_golang_x_net//context:go_default_library",
     ],
 )

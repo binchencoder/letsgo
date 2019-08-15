@@ -39,9 +39,10 @@ type Verbose Logger
 // not evaluate its arguments.
 //
 // See the documentation of github.com/golang/glog.V for more information.
-func V(level glog.Level) Switch {
-	return Switch(glog.VDepth(1, level))
-}
+// TODO(chenbin) 2019/08/15
+// func V(level glog.Level) Switch {
+// 	return Switch(glog.VDepth(1, level))
+// }
 
 // Context return a Logger with MDC from ctx.
 func Context(ctx context.Context) *Logger {
