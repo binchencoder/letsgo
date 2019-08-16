@@ -201,17 +201,17 @@ func TestDBSessionToRawDB(t *testing.T) {
 	})
 }
 
-func TestDBSessionToUpperIoDB(t *testing.T) {
-	Convey("Convert DBSession to upper.io sqlbuilder.Database", t, func() {
-		Convey("when the session is a valid sqlbuilder.Database instance", func() {
-			var s sqlbuilder.Database = &mockUpperIoDB{}
-			db := DBSessionToUpperIoDB(s)
-			So(db, ShouldNotBeNil)
-		})
-		Convey("when the session is not a valid sqlbuilder.Database instance", func() {
-			s := mockInvalidDB{}
-			db := DBSessionToUpperIoDB(&s)
-			So(db, ShouldBeNil)
-		})
-	})
-}
+// func TestDBSessionToUpperIoDB(t *testing.T) {
+// 	Convey("Convert DBSession to upper.io sqlbuilder.Database", t, func() {
+// 		Convey("when the session is a valid sqlbuilder.Database instance", func() {
+// 			var s sqlbuilder.Database = &mockUpperIoDB{}
+// 			db := DBSessionToUpperIoDB(s)
+// 			So(db, ShouldNotBeNil)
+// 		})
+// 		Convey("when the session is not a valid sqlbuilder.Database instance", func() {
+// 			s := mockInvalidDB{}
+// 			db := DBSessionToUpperIoDB(&s)
+// 			So(db, ShouldBeNil)
+// 		})
+// 	})
+// }

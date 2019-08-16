@@ -68,6 +68,11 @@ def go_repositories():
         commit = "221dbe5ed46703ee255b1da0dec05086f5035f62",
     )
     go_repository(
+        name = "com_github_soheilhy_cmux",
+        importpath = "github.com/soheilhy/cmux",
+        commit = "8a8ea3c53959009183d7914522833c1ed8835020",
+    )
+    go_repository(
         name = "com_github_uber_jaeger_client_go",
         importpath = "github.com/uber/jaeger-client-go",
         urls = [
@@ -91,9 +96,9 @@ def go_repositories():
         name = "com_github_prometheus_client_golang",
         importpath = "github.com/prometheus/client_golang",
         urls = [
-            "https://codeload.github.com/prometheus/client_golang/tar.gz/b7953aabc651bb0e5748a8b314e339b3ab60248f",
+            "https://codeload.github.com/prometheus/client_golang/tar.gz/b12dd9c58c3d7ce96f9e1ede31d02f6df3d50c61",
         ],
-        strip_prefix = "client_golang-b7953aabc651bb0e5748a8b314e339b3ab60248f",
+        strip_prefix = "client_golang-b12dd9c58c3d7ce96f9e1ede31d02f6df3d50c61",
         type = "tar.gz",
         # gazelle args: -go_prefix github.com/prometheus/client_golang
     )
@@ -117,19 +122,20 @@ def go_repositories():
         type = "tar.gz",
     )
     go_repository(
+        name = "com_github_prometheus_procfs",
+        importpath = "github.com/prometheus/procfs",
+        urls = [
+            "https://codeload.github.com/prometheus/procfs/tar.gz/6df11039f8de6804bb01c0ebd52cde9c26091e1c",
+        ],
+        strip_prefix = "procfs-6df11039f8de6804bb01c0ebd52cde9c26091e1c",
+        type = "tar.gz",
+    )
+    go_repository(
         name = "com_github_beorn7_perks",
         importpath = "github.com/beorn7/perks",
         urls = ["https://codeload.github.com/beorn7/perks/tar.gz/37c8de3658fcb183f997c4e13e8337516ab753e6"],
         strip_prefix = "perks-37c8de3658fcb183f997c4e13e8337516ab753e6",
         type = "tar.gz",
-    )
-    go_repository(
-        name = "com_github_smartystreets_assertions",
-        importpath = "github.com/smartystreets/assertions",
-        commit = "8df9578143a50c65c2675d8e3207386ca9375d31",
-        urls = ["https://codeload.github.com/smartystreets/assertions/tar.gz/8df9578143a50c65c2675d8e3207386ca9375d31"],
-        strip_prefix = "assertions-8df9578143a50c65c2675d8e3207386ca9375d31",
-        # gazelle args: -go_prefix github.com/smartystreets/assertions
     )
     go_repository(
         name = "com_github_jtolds_gls",

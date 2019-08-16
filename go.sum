@@ -2,6 +2,7 @@ github.com/VividCortex/gohistogram v1.0.0 h1:6+hBz+qvs0JOrrNhhmR7lFxo5sINxBCGXrd
 github.com/VividCortex/gohistogram v1.0.0/go.mod h1:Pf5mBqqDxYaXu3hDrrU+w6nw50o/4+TcAqDqk/vUH7g=
 github.com/binchencoder/ease-gateway v0.0.0-20190812235348-00068ce2fd7f h1:uAbaHhl7Wuf6dM6weI9ORXRYSvdC7H+5BJLKpWDpT9E=
 github.com/binchencoder/gateway-proto v0.0.0-20190815105147-1ee4b0a8951f h1:s/FKfy6UazdSnndhV7ETJaYfg1/5goHY5jTBRZO89BM=
+github.com/binchencoder/gateway-proto v0.0.0-20190816031704-34a94e80f531 h1:vULx0Qtp7ccOH35iGej0WCNx7H1O84RNpIDSBZLXZB4=
 github.com/cenkalti/backoff v2.2.1+incompatible h1:tNowT99t7UNflLxfYYSlKYsBpXdEet03Pg2g16Swow4=
 github.com/cenkalti/backoff v2.2.1+incompatible/go.mod h1:90ReRw6GdpyfrHakVjL/QHaoyV4aDUVVkXQJJJ3NXXM=
 github.com/go-kit/kit v0.9.0 h1:wDJmvq38kDhkVxi50ni9ykkdUr1PKgqKOoi01fa0Mdk=
@@ -22,3 +23,5 @@ github.com/uber/jaeger-client-go v2.16.0+incompatible h1:Q2Pp6v3QYiocMxomCaJuwQG
 github.com/uber/jaeger-client-go v2.16.0+incompatible/go.mod h1:WVhlPFC8FDjOFMMWRy2pZqQJSXxYSwNYOkTr/Z6d3Kk=
 github.com/uber/jaeger-lib v2.0.0+incompatible h1:iMSCV0rmXEogjNWPh2D0xk9YVKvrtGoHJNe9ebLu/pw=
 github.com/uber/jaeger-lib v2.0.0+incompatible/go.mod h1:ComeNDZlWwrWnDv8aPp0Ba6+uUTzImX/AauajbLI56U=
+upper.io/db.v3 v3.6.1+incompatible h1:srz27oL/YnYKSDlTDp6yNgTC04tF6Wlr7HvUDNRo8HA=
+upper.io/db.v3 v3.6.1+incompatible/go.mod h1:FgTdD24eBjJAbPKsQSiHUNgXjOR4Lub3u1UMHSIh82Y=

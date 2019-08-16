@@ -13,4 +13,5 @@ require (
 	github.com/pkg/errors v0.8.1 // indirect
 	github.com/uber/jaeger-client-go v2.16.0+incompatible
 	github.com/uber/jaeger-lib v2.0.0+incompatible
+	upper.io/db.v3 v3.6.1+incompatible
 )
