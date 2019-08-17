@@ -56,58 +56,80 @@ http_archive(
     patch_args = ["-E", "-p1"],
     # gazelle args: -go_prefix google.golang.org/genproto/googleapi -proto disable
 )
+# go_repository(
+#     name = "org_golang_x_net",
+#     importpath = "golang.org/x/net",
+#     urls = [
+#         "https://codeload.github.com/golang/net/tar.gz/16b79f2e4e95ea23b2bf9903c9809ff7b013ce85", # master, as of 2019-03-3
+#     ],
+#     strip_prefix = "net-16b79f2e4e95ea23b2bf9903c9809ff7b013ce85",
+#     type = "tar.gz",
+#     # gazelle args: -go_prefix golang.org/x/net -proto disable
+# )
 go_repository(
     name = "org_golang_x_net",
     importpath = "golang.org/x/net",
-    urls = [
-        "https://codeload.github.com/golang/net/tar.gz/16b79f2e4e95ea23b2bf9903c9809ff7b013ce85", # master, as of 2019-03-3
-    ],
-    strip_prefix = "net-16b79f2e4e95ea23b2bf9903c9809ff7b013ce85",
-    type = "tar.gz",
+    commit = "16b79f2e4e95ea23b2bf9903c9809ff7b013ce85",
+    remote = "https://gitee.com/binchencoder/xnet",
+    vcs = "git",
     # gazelle args: -go_prefix golang.org/x/net -proto disable
 )
-go_repository(
-    name = "org_golang_x_net",
-    importpath = "golang.org/x/net",
-    urls = [
-        "https://codeload.github.com/golang/net/tar.gz/16b79f2e4e95ea23b2bf9903c9809ff7b013ce85", # master, as of 2019-03-3
-    ],
-    strip_prefix = "net-16b79f2e4e95ea23b2bf9903c9809ff7b013ce85",
-    type = "tar.gz",
-    # gazelle args: -go_prefix golang.org/x/net -proto disable
-)
+# go_repository(
+#     name = "org_golang_x_text",
+#     importpath = "golang.org/x/text",
+#     urls = [
+#         "https://codeload.github.com/golang/text/tar.gz/f21a4dfb5e38f5895301dc265a8def02365cc3d0", # v0.3.0, latest as of 2019-03-03
+#     ],
+#     strip_prefix = "text-f21a4dfb5e38f5895301dc265a8def02365cc3d0",
+#     type = "tar.gz",
+#     # gazelle args: -go_prefix golang.org/x/text -proto disable
+# )
 go_repository(
     name = "org_golang_x_text",
     importpath = "golang.org/x/text",
-    urls = [
-        "https://codeload.github.com/golang/text/tar.gz/f21a4dfb5e38f5895301dc265a8def02365cc3d0", # v0.3.0, latest as of 2019-03-03
-    ],
-    strip_prefix = "text-f21a4dfb5e38f5895301dc265a8def02365cc3d0",
-    type = "tar.gz",
+    commit = "f21a4dfb5e38f5895301dc265a8def02365cc3d0",
+    remote = "https://gitee.com/binchencoder/xtext",
+    vcs = "git",
     # gazelle args: -go_prefix golang.org/x/text -proto disable
 )
+# go_repository(
+#     name = "org_golang_x_sys",
+#     importpath = "golang.org/x/sys",
+#     urls = [
+#         "https://codeload.github.com/golang/sys/tar.gz/fde4db37ae7ad8191b03d30d27f258b5291ae4e3",
+#     ],
+#     strip_prefix = "sys-fde4db37ae7ad8191b03d30d27f258b5291ae4e3",
+#     type = "tar.gz",
+#     # gazelle args: -go_prefix golang.org/x/sys
+# )
 go_repository(
     name = "org_golang_x_sys",
     importpath = "golang.org/x/sys",
-    urls = [
-        "https://codeload.github.com/golang/sys/tar.gz/fde4db37ae7ad8191b03d30d27f258b5291ae4e3",
-    ],
-    strip_prefix = "sys-fde4db37ae7ad8191b03d30d27f258b5291ae4e3",
-    type = "tar.gz",
-    # gazelle args: -go_prefix golang.org/x/sys
+    commit = "fde4db37ae7ad8191b03d30d27f258b5291ae4e3",
+    remote = "https://gitee.com/binchencoder/xsys",
+    vcs = "git",
+    # gazelle args: -go_prefix golang.org/x/sys -proto disable
 )
+# go_repository(
+#     name = "org_golang_x_tools",
+#     importpath = "golang.org/x/tools",
+#     urls = [
+#         "https://codeload.github.com/golang/tools/tar.gz/c8855242db9c1762032abe33c2dff50de3ec9d05",
+#     ],
+#     strip_prefix = "tools-c8855242db9c1762032abe33c2dff50de3ec9d05",
+#     type = "tar.gz",
+#     patches = [
+#         "@io_bazel_rules_go//third_party:org_golang_x_tools-extras.patch",
+#     ],
+#     patch_args = ["-p1"],
+#     # gazelle args: -go_prefix golang.org/x/tools -proto disable
+# )
 go_repository(
     name = "org_golang_x_tools",
     importpath = "golang.org/x/tools",
-    urls = [
-        "https://codeload.github.com/golang/tools/tar.gz/c8855242db9c1762032abe33c2dff50de3ec9d05",
-    ],
-    strip_prefix = "tools-c8855242db9c1762032abe33c2dff50de3ec9d05",
-    type = "tar.gz",
-    patches = [
-        "@io_bazel_rules_go//third_party:org_golang_x_tools-extras.patch",
-    ],
-    patch_args = ["-p1"],
+    commit = "c8855242db9c1762032abe33c2dff50de3ec9d05",
+    remote = "https://gitee.com/binchencoder/xtools",
+    vcs = "git",
     # gazelle args: -go_prefix golang.org/x/tools -proto disable
 )
 
@@ -123,14 +145,21 @@ gazelle_dependencies()
 load("//:repositories.bzl", "go_repositories")
 go_repositories()
 
+# go_repository(
+#     name = "com_google_protobuf",
+#     importpath = "github.com/protocolbuffers/protobuf",
+#     urls = [
+#         "https://codeload.github.com/protocolbuffers/protobuf/tar.gz/09745575a923640154bcf307fba8aedff47f240a",
+#     ],
+#     strip_prefix = "protobuf-09745575a923640154bcf307fba8aedff47f240a",
+#     type = "tar.gz",
+# )
 go_repository(
     name = "com_google_protobuf",
     importpath = "github.com/protocolbuffers/protobuf",
-    urls = [
-        "https://codeload.github.com/protocolbuffers/protobuf/tar.gz/09745575a923640154bcf307fba8aedff47f240a",
-    ],
-    strip_prefix = "protobuf-09745575a923640154bcf307fba8aedff47f240a",
-    type = "tar.gz",
+    commit = "09745575a923640154bcf307fba8aedff47f240a",
+    remote = "https://gitee.com/binchencoder/protocolbuffers",
+    vcs = "git",
 )
 load("@com_google_protobuf//:protobuf_deps.bzl", "protobuf_deps")
 protobuf_deps()
