@@ -8,7 +8,7 @@ go_library(
         ["*.go"],
         exclude = ["*_test.go"],
     ),
-    importpath = "github.com/binchencoder/letsgo/token",
+    importpath = "binchencoder.com/letsgo/token",
     deps = ["@com_github_dgrijalva_jwt_go//:go_default_library"],
 )
 

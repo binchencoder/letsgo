@@ -5,7 +5,7 @@ import (
 
 	"golang.org/x/net/context"
 
-	vexpb "github.com/binchencoder/gateway-proto/data"
+	vexpb "binchencoder.com/gateway-proto/data"
 )
 
 const (

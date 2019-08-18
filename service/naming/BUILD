@@ -8,7 +8,7 @@ go_library(
         ["*.go"],
         exclude = ["*_test.go"],
     ),
-    importpath = "github.com/binchencoder/letsgo/service/naming",
+    importpath = "binchencoder.com/letsgo/service/naming",
     deps = [
         "@com_github_binchencoder_gateway_proto//data:go_default_library",
     ],

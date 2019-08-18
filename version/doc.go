@@ -3,7 +3,7 @@
 // To make it work, one has to:
 // a) add "letsgo.Init()" as the first line in main() function:
 // b) add the following line in the go_binary build target:
-//    linkstamp = "github.com/binchencoder/letsgo/version",
+//    linkstamp = "binchencoder.com/letsgo/version",
 //
 // To set the BUILD_EMBED_LABEL, add flag --embed_label in bazel build command:
 //    bazel build --embed_label=1.2.3 <taget>

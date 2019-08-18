@@ -7,8 +7,8 @@ import (
 	"golang.org/x/net/context"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/binchencoder/letsgo/ident"
-	vexpb "github.com/binchencoder/gateway-proto/data"
+	"binchencoder.com/letsgo/ident"
+	vexpb "binchencoder.com/gateway-proto/data"
 )
 
 func TestServiceId(t *testing.T) {

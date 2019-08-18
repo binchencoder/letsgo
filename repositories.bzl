@@ -3,8 +3,12 @@ load("@bazel_gazelle//:deps.bzl", "go_repository")
 def go_repositories():
     go_repository(
         name = "com_github_binchencoder_gateway_proto",
-        importpath = "github.com/binchencoder/gateway-proto",
-        commit = "1ee4b0a8951fda57f986695253374d7847adbec6",
+        importpath = "binchencoder.com/gateway-proto",
+        urls = [
+            "https://codeload.github.com/binchencoder/gateway-proto/tar.gz/0e94d2e1eb41da66afa9e1184221a32ec559ce13",
+        ],
+        strip_prefix = "gateway-proto-0e94d2e1eb41da66afa9e1184221a32ec559ce13",
+        type = "tar.gz",
     )
 
     go_repository(

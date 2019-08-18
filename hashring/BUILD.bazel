@@ -8,7 +8,7 @@ go_library(
         ["*.go"],
         exclude = ["*_test.go"],
     ),
-    importpath = "github.com/binchencoder/letsgo/hashring",
+    importpath = "binchencoder.com/letsgo/hashring",
     deps = [
         "@com_github_pborman_uuid//:go_default_library",
         "@org_golang_x_net//context:go_default_library",

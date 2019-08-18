@@ -5,7 +5,7 @@ import (
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
 
-	pb "github.com/binchencoder/gateway-proto/frontend"
+	pb "binchencoder.com/gateway-proto/frontend"
 )
 
 var marshaler = jsonpb.Marshaler{

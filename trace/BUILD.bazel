@@ -9,7 +9,7 @@ go_library(
         "header.go",
         "trace.go",
     ],
-    importpath = "github.com/binchencoder/letsgo/trace",
+    importpath = "binchencoder.com/letsgo/trace",
     deps = [
         "@com_github_golang_glog//:go_default_library",
         "@com_github_pborman_uuid//:go_default_library",

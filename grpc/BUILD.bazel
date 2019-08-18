@@ -8,7 +8,7 @@ go_library(
         ["*.go"],
         exclude = ["*_test.go"],
     ),
-    importpath = "github.com/binchencoder/letsgo/grpc",
+    importpath = "binchencoder.com/letsgo/grpc",
     deps = [
         "//hashring:go_default_library",
         "//ident:go_default_library",

@@ -3,7 +3,7 @@ package naming
 import (
 	"testing"
 
-	dpb "github.com/binchencoder/gateway-proto/data"
+	dpb "binchencoder.com/gateway-proto/data"
 )
 
 func TestToString(t *testing.T) {

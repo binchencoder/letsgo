@@ -3,7 +3,7 @@ package ident
 import (
 	"golang.org/x/net/context"
 
-	data "github.com/binchencoder/gateway-proto/data"
+	data "binchencoder.com/gateway-proto/data"
 )
 
 type userDetailsKey struct{}
