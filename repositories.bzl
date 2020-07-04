@@ -129,18 +129,6 @@ def go_repositories():
         version = "v0.0.0-20160126235308-23def4e6c14b",
     )
     go_repository(
-        name = "com_github_golang_net",
-        importpath = "github.com/golang/net",
-        sum = "h1:X9dVUMumjy/PQ8y3IPNKYF7dv1pSypS/vZh83Z1wHR0=",
-        version = "v0.0.0-20200625001655-4c5254603344",
-    )
-    go_repository(
-        name = "com_github_golang_tools",
-        importpath = "github.com/golang/tools",
-        sum = "h1:Dwkv27oeC2nJasciTOg8vWWUSVulLNJrSjZKSx1kl6Y=",
-        version = "v0.0.0-20200702044944-0cc1aa72b347",
-    )
-    go_repository(
         name = "com_github_google_uuid",
         importpath = "github.com/google/uuid",
         sum = "h1:Gkbcsh/GbpXz7lPftLA3P6TYMwjCLYm83jiFQZF/3gY=",
