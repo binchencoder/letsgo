@@ -29,10 +29,8 @@ def go_repositories():
     go_repository(
         name = "com_github_coreos_etcd",
         importpath = "github.com/coreos/etcd",
-        urls = ["https://codeload.github.com/etcd-io/etcd/tar.gz/98d308426819d892e149fe45f6fd542464cb1f9d"],
-        strip_prefix = "etcd-98d308426819d892e149fe45f6fd542464cb1f9d",
-        type = "tar.gz",
-        build_file_generation = "on",
+        sum = "h1:8F3hqu9fGYLBifCmRCJsicFqDx/D68Rt3q1JMazcgBQ=",
+        version = "v3.3.13+incompatible",
     )
     go_repository(
         name = "com_github_coreos_go_semver",
