@@ -5,10 +5,10 @@ import (
 
 	"golang.org/x/net/context"
 
-	vexpb "binchencoder.com/gateway-proto/data"
-	"binchencoder.com/letsgo/hashring"
-	"binchencoder.com/letsgo/ident"
-	"binchencoder.com/letsgo/trace"
+	vexpb "github.com/binchencoder/gateway-proto/data"
+	"github.com/binchencoder/letsgo/hashring"
+	"github.com/binchencoder/letsgo/ident"
+	"github.com/binchencoder/letsgo/trace"
 )
 
 const (

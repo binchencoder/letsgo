@@ -8,7 +8,7 @@ go_library(
         ["*.go"],
         exclude = ["*_test.go"],
     ),
-    importpath = "binchencoder.com/letsgo/log",
+    importpath = "github.com/binchencoder/letsgo/log",
     deps = [
         "//grpc:go_default_library",
         "//trace:go_default_library",

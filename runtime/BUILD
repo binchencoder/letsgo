@@ -8,5 +8,5 @@ go_library(
         ["*.go"],
         exclude = ["*_test.go"],
     ),
-    importpath = "binchencoder.com/letsgo/runtime",
+    importpath = "github.com/binchencoder/letsgo/runtime",
 )

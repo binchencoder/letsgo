@@ -8,7 +8,7 @@ go_library(
         "init.go",
         "pprof.go",
     ],
-    importpath = "binchencoder.com/letsgo/runtime/pprof",
+    importpath = "github.com/binchencoder/letsgo/runtime/pprof",
     deps = [
         "@com_github_golang_glog//:go_default_library",
     ],

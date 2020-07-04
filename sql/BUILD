@@ -5,7 +5,7 @@ load("@io_bazel_rules_go//go:def.bzl", "go_library", "go_test")
 go_library(
     name = "go_default_library",
     srcs = ["sql.go"],
-    importpath = "binchencoder.com/letsgo/sql",
+    importpath = "github.com/binchencoder/letsgo/sql",
     deps = ["@io_upper_db_v3//lib/sqlbuilder:go_default_library"],
 )
 

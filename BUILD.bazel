@@ -22,7 +22,7 @@ gazelle(name = "gazelle")
 go_library(
     name = "go_default_library",
     srcs = ["init.go"],
-    importpath = "binchencoder.com/letsgo",
+    importpath = "github.com/binchencoder/letsgo",
     deps = [
         "//log:go_default_library",
         "//runtime:go_default_library",

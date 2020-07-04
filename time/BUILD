@@ -8,7 +8,7 @@ go_library(
         ["*.go"],
         exclude = ["*_test.go"],
     ),
-    importpath = "binchencoder.com/letsgo/time",
+    importpath = "github.com/binchencoder/letsgo/time",
 )
 
 go_test(

@@ -6,8 +6,8 @@ import (
 	"github.com/golang/glog"
 	"golang.org/x/net/context"
 
-	"binchencoder.com/letsgo/grpc"
-	"binchencoder.com/letsgo/trace"
+	"github.com/binchencoder/letsgo/grpc"
+	"github.com/binchencoder/letsgo/trace"
 )
 
 const (
