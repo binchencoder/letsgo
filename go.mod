@@ -1,4 +1,4 @@
-module github.com
+module github.com/binchencoder/letsgo
 
 go 1.13
 
