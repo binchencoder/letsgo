@@ -4,8 +4,8 @@ def go_repositories():
     go_repository(
         name = "com_github_binchencoder_gateway_proto",
         importpath = "github.com/binchencoder/gateway-proto",
-        sum = "h1:9ri5ICziCE4CB6BMVhLlnDEqu/asdIoOr8/TDCJ+qGI=",
-        version = "v0.0.0-20200704042644-d47e63e63f70",
+        sum = "h1:k7krrAyUmeHnDbcR2DnZp1jSUQ9+ZyZV1UPEQssvCn8=",
+        version = "v0.0.1",
     )
 
     go_repository(
