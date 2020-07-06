@@ -8,7 +8,7 @@ require (
 	github.com/coreos/bbolt v1.3.4 // indirect
 	github.com/coreos/etcd v3.3.13+incompatible
 	github.com/coreos/go-semver v0.3.0 // indirect
-	github.com/dgrijalva/jwt-go v3.2.0+incompatible
+	github.com/dgrijalva/jwt-go v2.7.0+incompatible
 	github.com/go-kit/kit v0.10.0 // indirect
 	github.com/golang/glog v0.0.0-20160126235308-23def4e6c14b
 	github.com/golang/protobuf v1.4.2
@@ -17,7 +17,7 @@ require (
 	github.com/opentracing/opentracing-go v1.2.0
 	github.com/pborman/uuid v1.2.0
 	github.com/pkg/errors v0.9.1 // indirect
-	github.com/prometheus/client_golang v1.3.0
+	github.com/prometheus/client_golang v0.9.4
 	github.com/prometheus/common v0.10.0 // indirect
 	github.com/prometheus/procfs v0.1.3 // indirect
 	github.com/smartystreets/assertions v1.0.1 // indirect
