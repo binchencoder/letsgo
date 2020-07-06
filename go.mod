@@ -3,6 +3,7 @@ module github.com/binchencoder/letsgo
 go 1.13
 
 require (
+	github.com/binchencoder/gateway-proto v0.0.4 // indirect
 	github.com/cenkalti/backoff v2.2.1+incompatible
 	github.com/coreos/bbolt v1.3.4 // indirect
 	github.com/coreos/etcd v3.3.13+incompatible
