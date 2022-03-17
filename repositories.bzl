@@ -48,8 +48,8 @@ def go_repositories():
     go_repository(
         name = "com_github_dgrijalva_jwt_go",
         importpath = "github.com/dgrijalva/jwt-go",
-        sum = "h1:54T2qn/iIwjg7JGrMsKD3WID0+CaYUrJgyXDM5ckYLk=",
-        version = "v2.7.0+incompatible",
+        sum = "h1:7qlOGliEKZXTDg6OTjfoBKDXWrumCAMpl/TFQ4/5kLM=",
+        version = "v3.2.0+incompatible",
     )
     go_repository(
         name = "com_github_go_kit_kit",
