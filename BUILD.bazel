@@ -13,7 +13,7 @@ buildifier(
     mode = "check",
 )
 
-# gazelle:exclude third_party
+# gazelle:exclude third_party 
 # gazelle:exclude vendor
 # gazelle:exclude _output
 # gazelle:prefix github.com/binchencoder/letsgo
